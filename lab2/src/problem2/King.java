@@ -1,0 +1,21 @@
+package problem2;
+
+public class King extends Piece{
+	
+	public King(Position a) {
+		super(a);
+	}
+	
+	@Override
+	public boolean isLegalMove(Position b) {
+		int rowDiff = Math.abs(a.row - b.row);
+        int colDiff = Math.abs(a.col - b.col);
+
+        if(rowDiff <= 1 && colDiff <= 1){
+            return true;
+        }
+        
+        return false;
+	}
+	
+}
